@@ -1,0 +1,25 @@
+.focus-hide * {
+  transition: opacity 0.25s ease, filter 0.25s ease;
+}
+
+.focus-hide iframe,
+.focus-hide .sidebar,
+.focus-hide #comments,
+.focus-hide [id*="comment"],
+.focus-hide [class*="recommend"],
+.focus-hide [class*="suggest"],
+.focus-hide .ads,
+.focus-hide .ad {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  filter: blur(4px);
+}
+
+.focus-hide::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+  pointer-events: none;
+  z-index: 999999;
+}
